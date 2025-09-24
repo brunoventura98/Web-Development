@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo dos Palitinhos</title>
+    <style>
+        .box {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo dos Palitinhos</h1>
+    Seu nome:
+    <input type="text" id="cxaNome"/> 
+    <button onclick="alterarNome()">Alterar Nome</button>
+    <table>
+        <tr>
+            <td class="box">
+                <h2 id="nomeJog">Eu</h2>
+                <h3>
+                    Palitos: <span id="qtdEu">3</span>
+                </h3>
+                <button onclick="clicouBotaoJogar()">Jogar</button>
+            </td>
+            <td class="box">
+                <h2>Computador</h2>
+                <h3>
+                    Palitos: <span id="qtdComp">3</span>
+                </h3>
+                <button>Jogar</button>
+            </td>
+        </tr>
+    </table>
+
+    <h2 id="cxaMsg">
+        Mensagem:
+    </h2>
+
+    <script>
+        /// let nome = prompt("Digite seu nome:")
+        /// console.log("nome:",nome)
+        
+        let nome
+        let qtdeComp = 3
+        let qtdeJog = 3
+        let elemqtdEu = document.getElementById("qtdEu")
+        let elemqtdComp = document.getElementById("qtdComp")
+        let elemcxaMsg = document.getElementById("cxaMsg")
+        
+        function clicouBotaoJogar() {
+            console.log("Estou aqui...")
+            let qtdeSeparaJog = prompt("Digite a quantidade que você quer separar")
+            let qtdePalpiteJog = prompt("Digite seu palpite")
+            qtdeSeparaJog = parseInt(qtdeSeparaJog)
+            qtdePalpiteJog = parseInt(qtdePalpiteJog)
+            console.log("qtdeSeparaJog", qtdeSeparaJog);
+            console.log("qtdePalpiteJog", qtdePalpiteJog);
+            console.log("qtdeSeparaComp", qtdeSeparaComp);
+            console.log("qtdePaplpiteComp", qtdePalpiteComp);
+
+            // qtdeSeparaJog = parseInt(qtdeSeparaJog) -> forma de ser econômico para o código acima
+
+            let qtdeSeparaComp = parseInt(Math.random()*10) % (qtdeComp+1)
+            // qtdeSeparaJog = qtdeSeparaJog % 4
+            let qtdePalpiteComp = qtdeSeparaComp + parseInt(Math.random()*10) % (qtdeJog+1)
+
+            // Math.random() para gerar um número psudeo aleatório no console. *10 para jogar uma casa decimal para cima
+
+            let total = qtdeSeparaJog + qtdeComp
+            if(qtdePalpiteJog==total) {
+                console.log(nome+"Ganhou!");
+                elemcxaMsg.innerText = nome + "Ganhou!"
+                qtdeJog++
+                elemqtdEu.innerText = qtdeJog
+            } else {
+                if(qtdePalpiteComp==total) {
+                console.log("Computador ganhou!")
+                elemcxaMsg.innerText = "Computador ganhou!"
+                qtdeComp--
+                elemqtdComp.innerText = qtdeComp
+                } else {
+                console.log("Ninguém ganhou!")
+                elemcxaMsg.innerText = "Ninguém ganhou!"
+                }
+            }
+
+        }
+
+        function alterarNome() {
+            let elemInput = document.getElementById("cxaNome")
+            let elemH2 = document.getElementById("nomeJog")
+            let nome = elemInput.value
+            elemH2.innerText = nome
+        }
+
+        clicouBotaoJogar()
+    </script>
+</body>
+</html>
