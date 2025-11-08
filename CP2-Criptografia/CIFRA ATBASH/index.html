@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP2 - CIFRA ATBASH</title>
+</head>
+<body>
+    <h1>Cifra Atbash</h1>
+
+    <script>
+        /* 
+        LÓGICA DA CIFRA DE ATBASH 
+        O programa precisa receber uma mensagem e trocar as letras recebidas pela letra diametralmente oposto no alfabeto
+
+        Exemplo: A -> Z, B -> Y, C -> W ... W -> C, Y -> B, Z -> A
+
+        A Cifra Atbash é a mais simples das cifras de substituição, sendo recíproca (a codificação é a mesma que a decodificação): A ↔ Z, B ↔ Y, C ↔ X, etc.
+
+
+        Índice:   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+        Normal:   a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z
+        Espelho:  z  y  x  w  v  u  t  s  r  q  p  o  n  m  l  k  j  i  h  g  f  e  d  c  b  a
+        */
+
+    function cifrarAtbash(mensagem) {
+    // Sua lógica de codificação Atbash aqui
+    const alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; // guarda as letras e os índices
+
+    let resultado = ''; // essa variável irá aguardar o resultado final
+
+    for (i = 0; i < mensagem.length; i++) {
+        let caractere = mensagem[i].toLowerCase(); // trata letras maiusculas
+
+        if (alfabeto.includes(caractere)) { // checa se o caractere da mensagem existe no alfabeto
+            let indice = alfabeto.indexOf(caractere); // quero pegar o indice dos caracteres da mensagem
+            let novo_indice = (25 - indice); // trocar pelo novo indice para criptografar 
+            resultado += alfabeto[novo_indice]; // montar a nova mensagem
+        } else {
+            resultado += mensagem[i] // mantém espaços e pontuação
+        }
+    }
+
+    return resultado // encerra a função retornando a palavra encriptada
+}
+
+// Teste 
+let mensagem = prompt('Digite uma mensagem que será criptografada'); // usuário define a mensagem
+let encriptada = cifrarAtbash(mensagem); // chama a função
+console.log('A mensagem encriptada é: ', encriptada); // retorna a mensagem cifrada
+console.log('A mensagem original é ', cifrarAtbash(encriptada)); // a mesma função descifra a mensagem
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP2 - CIFRA DE CESAR</title>
+</head>
+<body>
+    <h1>Cifra de Cesar</h1>
+
+    <script>
+
+        /* 
+            LÓGICA DA CIFRA DE CÉSAR:
+            O programa precisar receber uma mensagem e uma chave, transformar a mensagem recebida na mensagem cripotagrafada de acordo com o valor da chave
+
+            Índice:   0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+            Normal:   a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z
+
+
+           A Cifra de César desloca cada letra por um número fixo de posições (a chave).
+
+           Fórmula Essencial (Deslocamento Circular):
+
+            Novo Índice = ( Índice Original + Chave ) ( mod 26 ) 
+
+        */
+
+        function cifrarCesar(mensagem, chave) { // função tem que receber uma mensagem e uma chave, a chave vai cifrar e descifrar a mensagem
+            // Sua lógica de César aqui
+
+            const alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; // a lista vai guardar as letras e os índices
+
+            let resultado = ''; // armazena a mensagem encriptada
+
+            for (i = 0; i < mensagem.length; i++) { // percorre a mensagem
+                let caractere = mensagem[i].toLowerCase(); // trata letras maiusculas
+
+                if (alfabeto.includes(caractere)) { // includes checa se 
+                    let indice = alfabeto.indexOf(caractere); // encontra a posição da letra no alfabeto
+                    let novoindice = (indice + chave + 26) % 26; // calcula a nova posição considerando chave negativa
+                    resultado += alfabeto[novoindice]; // adiciona a letra cifrada ao resultado
+                } else {
+                    resultado += mensagem[i] // mantém espaços e pontuação
+                }
+            }
+
+            return resultado; // encerra a função retornando a palavra encriptada
+        }
+
+        // Teste
+        let mensagem = prompt('Digite uma mensagem que será criptografada'); // usuário define a mensagem que será escrita
+        let chave = parseInt(prompt('Digite a chave de encriptação')); // usuário define a chave que será utilizada
+
+        let encriptada = cifrarCesar(mensagem, chave); // chama a função para cifrar a mensagem
+        console.log("A mensagem encriptada é: ", encriptada); // mostra a mensagem cifrada
+        console.log("A mensagem descifrada é:", cifrarCesar(encriptada, -chave)); // descifra a mensagem usando chave negativa
+        
+    </script>
+</body>
+</html>
