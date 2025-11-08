@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let nota1, nota2, nota3
+        nota1 = 10
+        nota2 = 7
+        nota3 = 8
+
+        i = 2
+        notai = 3 // guard na nota 2
+        console.log(notai);
+        i++
+        notai = 8 // guarda na nota 3
+        console.log(notai);
+
+        // Ao invés disso, fazer isso:
+
+        let nota = array(10)
+
+        let x, y
+
+        x = 3
+        y = 5
+
+        let v = [7,9]
+
+        v[1] = 10 // substitui 9 por 10
+
+
+        console.log("Oi, gente!");
+
+        let v = []
+        v[0] = 10
+        v[3] = 8
+        // Se imprimir o v, ele vai mostrar que existem posições vazias no array
+        // v.lenght -> conta quantos espaços tem no array, incluindo as vazias
+
+        let nomes = ["Ana", "Maria", "João", "Maria", "Paulo", "Sergio", "Gustavo"]
+        // Se imprimir v, vai mostra as posições, sempre começando do zero
+        nomes[3] = "Euclides"
+        // Agora o indice na posição 3, "Maria" vira "Euclides"
+
+        console.log("Bom dia", nomes[0]);
+
+        for(let i=0; i<=3; i++) {
+            console.log("Bom dia,", nomes[i]);
+        }
+
+        // Ou
+
+        for(let i=0; i<nomes.length; i++) {
+            console.log("Bom dia,", nomes[i] )
+        }
+
+        /* let pos = Math.floor(Math.random()*1000)
+        console.log("pos", pos); // sorteia números de 1 a 1000;
+
+        let pos = Math.floor(Math.random()*1000) % 14
+        console.log("pos", pos); // sorteia números de 1 a 13;
+        */
+        
+        let pos = Math.floor(Math.random()*1000) % nomes.length // Math.random gera número quebrados, então arrendondamos
+        console.log("pos", pos); // sorteia os números de zero até o tamanho de nomes
+        console.log("Bom dia,", nomes[pos]) // da bom dia para a pessoa conforme, onde número sorteado é o indice do nome
+
+        // Exercicio: Fazer um programa que mistura nomes com sobrenomes:
+
+        let sobrenomes = ["Silva", "Antunes", "Abreu", "Ramon"]
+
+        let combinacaonomes = Math.floor(Math.random()*1000) % sobrenomes.length
+        console.log("Bom dia,", nomes[pos], sobrenomes[combinacaonomes])
+
+        function geraNome() {
+            let nomes = ["Ana", "Maria", "João", "Maria", "Paulo", "Sergio", "Gustavo"]
+            let sobrenomes = ["Silva", "Antunes", "Abreu", "Ramon"]
+
+            let pos = Math.floor(Math.random() * nomes.length) % nomes.length
+            let nome = nomes[pos]
+            pos = Math.floor(Math.random() * 10000) % sobrenomes.length
+            let sobrenome = sobrenomes[pos]
+
+            return nome + " " + sobrenome
+        }
+
+        let nome = geraNome()
+        console.log("Bom dia," + nome);
+
+    </script>
+
+
+</body>
+</html>

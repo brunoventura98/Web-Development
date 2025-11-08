@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07</title>
+</head>
+<body>
+    <h1>Aula 07</h1>
+
+    <script> 
+
+        function caixa(texto) {
+            console.log("+-----------+");
+            console.log("| oi, gente |");
+            console.log("+-----------+");
+        }
+
+        caixa("bom dia")
+
+        function caixa(texto) {
+            console.log("+-----------+");
+            console.log("| "+texto+" |");
+            console.log("+-----------+");
+        }
+
+        let nome = "Ana"
+        caixa(nome)
+
+        function caixa(texto) {
+            let linha = "+-"
+            for(let i=0; i < texto.lenght; i++) {
+                linha = linha + "-"
+            }
+            linha = linha + "-+"
+            console.log(linha);
+            console.log("| "+texto+" |");
+            console.log(linha);
+        }
+
+        // let nome = "Ana"
+        caixa(nome)
+        caixa("oi, gente")
+        caixa("oi "+nome)
+
+        function caixa(texto, char) {
+            let linha = "+"+char
+            for(let i=0; i < texto.lenght; i++) {
+                linha = linha + char
+            }
+            linha = linha + char + "+"
+            console.log(linha);
+            console.log("| "+texto+" |");
+            console.log(linha);
+        }
+
+        // let nome = "Ana"
+        caixa(nome, "*")
+        caixa("oi, gente", "#")
+
+        function frutaEmoji(nomeDaFruta) {
+            if(nomeDaFruta == "morango") {
+                return "morango"
+            }
+            if(nomeDaFruta == "limão") {
+                return "limão"
+            }
+            if(nomeDaFruta == "maçã") {
+                return "maçã"
+            }
+        }
+
+        let emoji = frutaEmoji("limão")
+        console.log(emoji)
+
+        console.log(frutaEmoji("limão"))
+        console.log(frutaEmoji("maçã"))
+
+    </script>
+</body>
+</html>
