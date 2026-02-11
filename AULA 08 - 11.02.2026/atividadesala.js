@@ -1,0 +1,11 @@
+/* Para praticar 
+
+Construa uma lista de compras:
+
+- Adicione um campo para o usuário inserir um item e um botão para "Salvar".
+- Quando o usuário clicar no botão "Salvar", armaene o item no localStorage;
+- Insira um botão "Visualizar" para exibir na tela todos os itens da lista de compras que estão armazenados no localStorage;
+- Insira também um botão "Limpar" para apagar todos os itens armazenados no localStorage.
+*/
+
+let inserir = getElementbyId
