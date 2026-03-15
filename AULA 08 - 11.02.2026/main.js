@@ -6,7 +6,7 @@ Storage e Json
 
 Storage
 
-API de armazenamento web permite armazenar dados de forma local no navegador sem a necessidade de realizar nehuma conexão com um servidor.
+API de armazenamento web permite armazenar dados de forma local no navegador sem a necessidade de realizar uma conexão com um servidor.
 
 - É vantajoso para preservar informações
 

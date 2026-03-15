@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkpoint 4 - Aplicação de simulação de compras</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <h1><i class="fa-solid fa-seedling"></i> EcoTrend</h1>
+  </header>
+
+  <main>
+    <div id="filtros">
+      <button class="btn-filtro" data-cat="todos">Todos</button>
+      <button class="btn-filtro" data-cat="roupas">Roupas</button>
+      <button class="btn-filtro" data-cat="acessorios">Acessórios</button>
+      <button class="btn-filtro" data-cat="beleza">Beleza</button>
+      <button class="btn-filtro" data-cat="casa">Casa</button>
+      <button class="btn-filtro" data-cat="tecnologia">Tecnologia</button>
+    </div>
+
+    <div id="conteudo">
+      <div id="grid-produtos"></div>
+
+      <aside id="sidebar">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Carrinho</h2>
+        <ul id="lista-carrinho"></ul>
+        <p id="carrinho-vazio">Seu carrinho está vazio.</p>
+        <div id="sidebar-footer">
+          <p>Total: <strong id="total">R$ 0,00</strong></p>
+          <button onclick="finalizarCompra()">Finalizar Compra</button>
+          <button onclick="limparCarrinho()">Limpar Carrinho</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

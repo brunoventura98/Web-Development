@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nome": "Camiseta de Algodão Orgânico",
+    "categoria": "roupas",
+    "valor": 89.9,
+    "quantidade": 3,
+    "descricao": "Feita com algodão 100% orgânico certificado, sem agrotóxicos.",
+    "icone": "fa-shirt"
+  },
+  {
+    "id": 2,
+    "nome": "Bolsa Ecológica de Algodão Reciclado",
+    "categoria": "acessorios",
+    "valor": 59.9,
+    "quantidade": 1,
+    "descricao": "Confeccionada com algodão reciclado, resistente e estilosa.",
+    "icone": "fa-bag-shopping"
+  },
+  {
+    "id": 3,
+    "nome": "Shampoo Sólido Natural sem Sulfatos",
+    "categoria": "beleza",
+    "valor": 34.9,
+    "quantidade": 8,
+    "descricao": "Fórmula natural, livre de sulfatos e parabenos.",
+    "icone": "fa-pump-soap"
+  },
+  {
+    "id": 4,
+    "nome": "Bálsamo Labial Natural com Cera de Abelha",
+    "categoria": "beleza",
+    "valor": 125.8,
+    "quantidade": 3,
+    "descricao": "Hidratação profunda com ingredientes 100% naturais.",
+    "icone": "fa-leaf"
+  },
+  {
+    "id": 5,
+    "nome": "Kit de Wraps Reutilizáveis de Cera de Abelha",
+    "categoria": "casa",
+    "valor": 49.9,
+    "quantidade": 5,
+    "descricao": "Substituto ecológico ao plástico filme para alimentos.",
+    "icone": "fa-box-open"
+  },
+  {
+    "id": 6,
+    "nome": "Escova de Limpeza com Cabo de Bambu",
+    "categoria": "casa",
+    "valor": 29.9,
+    "quantidade": 12,
+    "descricao": "Cabo de bambu sustentável com cerdas de fibra natural.",
+    "icone": "fa-broom"
+  },
+  {
+    "id": 7,
+    "nome": "Carregador Solar Portátil para Celular",
+    "categoria": "tecnologia",
+    "valor": 189.9,
+    "quantidade": 4,
+    "descricao": "Energia limpa e renovável direto para o seu dispositivo.",
+    "icone": "fa-solar-panel"
+  },
+  {
+    "id": 8,
+    "nome": "Lâmpada LED de Baixo Consumo Energético",
+    "categoria": "tecnologia",
+    "valor": 24.9,
+    "quantidade": 7,
+    "descricao": "Economia de até 80% de energia em relação às lâmpadas convencionais.",
+    "icone": "fa-lightbulb"
+  }
+]
