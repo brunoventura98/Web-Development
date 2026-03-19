@@ -1,0 +1,20 @@
+{
+  "name": "Biblioteca",
+  "version": "1.0.0",
+  "description": "Repositório para o curso de Web Development - 1ESPS",
+  "homepage": "https://github.com/brunoventura98/Web-Development#readme",
+  "bugs": {
+    "url": "https://github.com/brunoventura98/Web-Development/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoventura98/Web-Development.git"
+  },
+  "license": "ISC",
+  "author": "Bruno Ventura",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
