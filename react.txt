@@ -1,0 +1,7 @@
+# React Install VSCode
+
+npm create vite@latest .
+
+React
+
+Javascript
